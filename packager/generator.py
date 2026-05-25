@@ -144,6 +144,8 @@ def generate_payload(spec: TaskSpec, registry: ModelRegistry, output_dir: str):
     os.makedirs(sub_ninjas_dir, exist_ok=True)
     _generate_sub_ninja_configs(spec, registry, sub_ninjas_dir)
 
+    return output_dir
+
 
 def _copy_skills(skill_names: list, target_dir: str):
     """Copy referenced skills from Hermes skills directory into payload."""
